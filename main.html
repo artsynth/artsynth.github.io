@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interspeech 2026 Samples Page</title>
+    <style>
+        :root {
+            --border-color: #e1e4e8;
+            --header-bg: #f6f8fa;
+            --highlight-bg: #fffbdd;
+        }
+
+        body {
+            font-family: -apple-system, sans-serif;
+            padding: 40px;
+            background: #fff;
+            color: #24292e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        /* Sticky Header for Samples */
+        thead th {
+            position: sticky;
+            top: 0;
+            background: var(--header-bg);
+            z-index: 10;
+            padding: 20px;
+            border-bottom: 2px solid var(--border-color);
+            box-shadow: 0 2px 2px -1px rgba(0,0,0,0.1);
+        }
+
+        /* Sticky Column for Condition Names */
+        .condition-label {
+            position: sticky;
+            left: 0;
+            background: #fff;
+            font-weight: bold;
+            text-align: left;
+            padding: 15px 25px;
+            border-right: 1px solid var(--border-color);
+            z-index: 5;
+            width: 200px;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        /* Grouping Styles */
+        .section-divider {
+            background-color: #f1f1f1;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+        }
+
+        audio { width: 220px; height: 35px; }
+
+        .proposed-row { background-color: #f0f7ff; }
+    </style>
+</head>
+<body>
+
+    <h2>Feature Design and Generative Modelling in Deep Articulatory Synthesis</h2>
+    <p>Samples for Interspeech 2026 submission</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Condition</th>
+                <th>LibriTTS-R</th>
+                <th>Parallel (Clean)</th>
+                <th>Parallel (Noisy)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4" class="section-divider">Ground Truth</td>
+            </tr>
+            <tr>
+                <td class="condition-label">Original Recording</td>
+                <td><audio controls src="audio/ref/r.wav"></audio></td>
+                <td><audio controls src="audio/ref/c.wav"></audio></td>
+                <td><audio controls src="audio/ref/n.wav"></audio></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" class="section-divider">Synthesis</td>
+            </tr>
+            <tr>
+                <td class="condition-label">SPARC</td>
+                <td><audio controls src="audio/sparc/r.wav"></audio></td>
+                <td><audio controls src="audio/sparc/c.wav"></audio></td>
+                <td><audio controls src="audio/sparc/n.wav"></audio></td>
+            </tr>
+            <tr>
+                <td class="condition-label">Base</td>
+                <td><audio controls src="audio/base/r.wav"></audio></td>
+                <td><audio controls src="audio/base/c.wav"></audio></td>
+                <td><audio controls src="audio/base/n.wav"></audio></td>
+            </tr>
+            <tr >
+                <td class="condition-label">Base +Spk</td>
+                <td><audio controls src="audio/base_spk/r.wav"></audio></td>
+                <td><audio controls src="audio/base_spk/c.wav"></audio></td>
+                <td><audio controls src="audio/base_spk/n.wav"></audio></td>
+            </tr>
+            
+            <tr>
+                <td class="condition-label">Base +Spk +Src</td>
+                <td><audio controls src="audio/base_spk_src/r.wav"></audio></td>
+                <td><audio controls src="audio/base_spk_src/c.wav"></audio></td>
+                <td><audio controls src="audio/base_spk_src/n.wav"></audio></td>
+            </tr>
+            <tr>
+                <td class="condition-label">Large +Spk</td>
+                <td><audio controls src="audio/large_spk/r.wav"></audio></td>
+                <td><audio controls src="audio/large_spk/c.wav"></audio></td>
+                <td><audio controls src="audio/large_spk/n.wav"></audio></td>
+            </tr>
+            <tr>
+                <td class="condition-label">FM (NFE=2)</td>
+                <td><audio controls src="audio/fm_2/r.wav"></audio></td>
+                <td><audio controls src="audio/fm_2/c.wav"></audio></td>
+                <td><audio controls src="audio/fm_2/n.wav"></audio></td>
+            </tr>
+            <tr>
+                <td class="condition-label">FM +Spk (NFE=2)</td>
+                <td><audio controls src="audio/fm_spk_2/r.wav"></audio></td>
+                <td><audio controls src="audio/fm_spk_2/c.wav"></audio></td>
+                <td><audio controls src="audio/fm_spk_2/n.wav"></audio></td>
+            </tr>
+            <tr>
+                <td class="condition-label">FM (NFE=10)</td>
+                <td><audio controls src="audio/fm_10/r.wav"></audio></td>
+                <td><audio controls src="audio/fm_10/c.wav"></audio></td>
+                <td><audio controls src="audio/fm_10/n.wav"></audio></td>
+            </tr>
+            <tr>
+                <td class="condition-label">FM +Spk (NFE=10)</td>
+                <td><audio controls src="audio/fm_spk_10/r.wav"></audio></td>
+                <td><audio controls src="audio/fm_spk_10/c.wav"></audio></td>
+                <td><audio controls src="audio/fm_spk_10/n.wav"></audio></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
